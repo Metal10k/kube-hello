@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: hello
+ labels:
+   app: web
+spec:
+ containers:
+   - image: hello-node:v1
+     name: hello-node
+     ports:
+       - containerPort: 8080
+         protocol: TCP
